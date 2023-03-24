@@ -13,6 +13,11 @@ class xylophone extends StatefulWidget {
 }
 
 class _xylophoneState extends State<xylophone> {
+  void playSound(int i) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$i.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,60 +25,54 @@ class _xylophoneState extends State<xylophone> {
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.red),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note1.wav'));
+                  playSound(1);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.orange),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note2.wav'));
+                  playSound(2);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.yellow),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note3.wav'));
+                  playSound(3);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.green),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note4.wav'));
+                  playSound(4);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.teal),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note5.wav'));
+                  playSound(5);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note6.wav'));
+                  playSound(6);
                 },
                 child: Text(""),
               ),
               TextButton(
                 style: TextButton.styleFrom(backgroundColor: Colors.purple),
                 onPressed: () {
-                  final player = AudioPlayer();
-                  player.play(AssetSource('note7.wav'));
+                  playSound(7);
                 },
                 child: Text(""),
               ),
